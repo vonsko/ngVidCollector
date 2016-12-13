@@ -1,0 +1,5 @@
+.idea
+/app/bower_components/
+/node_modules/
+/app/bowerComponents.js
+/app/app.js

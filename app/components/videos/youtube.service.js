@@ -1,7 +1,6 @@
 (function () {
-  let SearchService = function ($http) {
-    function searchByQuery(query) {
-      let Service = (query.engine === "youtube") ? "YoutubeService" : "VimeoService";
+  let YoutubeService = function ($http) {
+    let search = function (query) {
       return $http.get("https://www.googleapis.com/youtube/v3/search", {
         params: {
           key: "AIzaSyDjMxSP8blKtpsjZ_C6Yk5Eu-u-bugif3M",
@@ -13,13 +12,12 @@
           q: query.text
         }
       });
-    }
-
+    };
     return {
-      searchByQuery
+      search
     };
   };
 
-  angular.module("search")
-    .factory("SearchService", SearchService);
+  angular.module("videos")
+    .factory("YoutubeService", YoutubeService);
 }());

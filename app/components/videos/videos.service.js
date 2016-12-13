@@ -1,5 +1,5 @@
 (function () {
-  let VideosService = function (StorageService) {
+  let VideosService = function (StorageService, $http, YoutubeService, VimeoService, $injector) {
     let currentResults = {all: [], page: [], info: {}};
 
     function getPageCount (length, perPage) {
@@ -45,10 +45,17 @@
       };
     }
 
+    function searchByQuery(query) {
+      let svcName = query.engine.toLowerCase().charAt(0).toUpperCase()+query.engine.slice(1).toLowerCase() + "Service";
+      let Service = $injector.get(svcName);
+      return Service.search(query);
+    }
+
     return {
       getPageCount,
       getVideosList,
-      getPageResult
+      getPageResult,
+      searchByQuery
     };
   };
 

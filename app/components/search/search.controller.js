@@ -1,5 +1,5 @@
 (function () {
-  let SearchController = function (SearchService, StorageService, $mdToast) {
+  let SearchController = function (VideosService, StorageService, $mdToast) {
 
     let ctrl = this;
     ctrl.query = {
@@ -7,7 +7,7 @@
       engine: "youtube"
     };
 
-    this.search = (query) => SearchService.searchByQuery(ctrl.query).then((res) => ctrl.searchResults = res.data.items);
+    this.search = (query) => VideosService.searchByQuery(ctrl.query).then((res) => ctrl.searchResults = res.data.items);
 
     this.addVideo = (video) => {
       StorageService.addVideo(video);

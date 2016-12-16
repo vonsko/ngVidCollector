@@ -1,5 +1,5 @@
 (function () {
-  let VideosService = function (StorageService, $http, YoutubeService, VimeoService, $injector) {
+  let VideosService = function (StorageService, $http, $injector) {
     let currentResults = {all: [], page: [], info: {}};
 
     function getPageCount (length, perPage) {
@@ -45,17 +45,39 @@
       };
     }
 
+    function getApiService (name) {
+      return name.toLowerCase().charAt(0).toUpperCase()+name.slice(1).toLowerCase() + "Service";
+    }
+
     function searchByQuery(query) {
-      let svcName = query.engine.toLowerCase().charAt(0).toUpperCase()+query.engine.slice(1).toLowerCase() + "Service";
-      let Service = $injector.get(svcName);
+      let Service = $injector.get(getApiService(query.engine));
       return Service.search(query);
+    }
+
+    function getEmbedCode (api, id, sizes) {
+      let Service = $injector.get(getApiService(api));
+      return Service.getEmbed(id, sizes);
+    }
+
+    function normalizeObject (video) {
+      let Service = $injector.get(getApiService(video.type));
+      return Service.normalizeObject(video);
+    }
+
+    function getNormalizedResults (type, results) {
+      let Service = $injector.get(getApiService(type));
+      return Service.getNormalizedResults(results);
     }
 
     return {
       getPageCount,
       getVideosList,
       getPageResult,
-      searchByQuery
+      searchByQuery,
+      getApiService,
+      getEmbedCode,
+      normalizeObject,
+      getNormalizedResults
     };
   };
 

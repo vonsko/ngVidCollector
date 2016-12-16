@@ -1,0 +1,21 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{ $ctrl.video.name }}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="$ctrl.hide()">
+          <md-icon aria-label="Close dialog">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <video-player width="600" type="{{ $ctrl.video.type }}" height="400"
+                      videoid="{{ $ctrl.video.id }}"></video-player>
+        <p>{{ $ctrl.video.description }}</p>
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

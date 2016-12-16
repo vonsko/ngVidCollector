@@ -2,24 +2,33 @@
   let SearchController = function (VideosService, StorageService, $mdToast) {
 
     let ctrl = this;
+
     ctrl.query = {
-      text: "GCp2vSNdWBA",
+      text: "Deus Ex Machina",
       engine: "youtube"
     };
 
-    this.search = (query) => VideosService.searchByQuery(ctrl.query).then((res) => ctrl.searchResults = res.data.items);
+    ctrl.loading = false;
 
-    this.addVideo = (video) => {
+    ctrl.search = () => {
+      ctrl.loading = true;
+      VideosService.searchByQuery(ctrl.query).then((res) => {
+        ctrl.searchResults = VideosService.getNormalizedResults(ctrl.query.engine, res);
+        ctrl.loading = false;
+      });
+    };
+
+    ctrl.addVideo = (video) => {
       StorageService.addVideo(video);
       $mdToast.show(
         $mdToast.simple()
-          .textContent(`Video ${ video.snippet.title } added to collection`)
+          .textContent(`Video ${ video.name } added to collection`)
           .position("top right")
           .hideDelay(3000)
       );
     };
 
-    this.inStorage = (id) => StorageService.isInStorage(id);
+    ctrl.inStorage = (id) => StorageService.isInStorage(id);
   };
 
   angular.module("search")

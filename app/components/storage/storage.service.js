@@ -1,6 +1,6 @@
 (function () {
-  let StorageService = function (localStorageService) {
-    function getVideoList(paramObj) {
+  let StorageService = function (localStorageService, $q) {
+    function getVideoList() {
       return localStorageService.get("videosList") || [];
     }
 
@@ -9,7 +9,9 @@
     }
 
     function clearStorage() {
-      localStorageService.clearAll();
+      let defer = $q.defer();
+      defer.resolve(localStorageService.clearAll());
+      return defer.promise;
     }
 
     function fillStorage(data) {
@@ -24,22 +26,16 @@
 
     function addVideo(video) {
       let videoList = getVideoList();
-      let newObj = {
-        id: video.id.videoId,
-        type: video.id.kind,
-        name: video.snippet.title,
-        thumbnails: video.snippet.thumbnails,
-        description: video.snippet.description,
+      let baseFields = {
         dateAdd: moment().toDate().getTime(),
         fav: false
       };
-
       // @todo pass thru checkfordupes func
-      videoList.push(newObj);
+      videoList.push(Object.assign(video, baseFields));
       updateVideoList(videoList);
     }
 
-    function deleteVideo(video) {
+    function deleteElement(video) {
       let videoList = getVideoList();
       _.remove(videoList, (i) => i.id === video.id);
       updateVideoList(videoList);
@@ -62,7 +58,7 @@
       fillStorage,
       isInStorage,
       updateVideo,
-      deleteVideo
+      deleteElement
     };
   };
 

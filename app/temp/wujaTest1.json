@@ -1,7 +1,7 @@
 [
     {
         "id": "VDinoNRC49c",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Come Together – directed by Wes Anderson starring Adrien Brody – H&M",
         "thumbnails": {
             "default": {
@@ -27,7 +27,7 @@
     },
     {
         "id": "HzyE8ora_A8",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Destiny Crucible Hightlight #1",
         "thumbnails": {
             "default": {
@@ -53,7 +53,7 @@
     },
     {
         "id": "4IYt8A2vu7Y",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Fences Official Trailer 2 (2016) - Denzel Washington Movie",
         "thumbnails": {
             "default": {
@@ -79,7 +79,7 @@
     },
     {
         "id": "tU5Rnd-HM6A",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Czego szukasz w Święta? | English for beginners",
         "thumbnails": {
             "default": {
@@ -105,7 +105,7 @@
     },
     {
         "id": "GbgaKTEyx0U",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Y-3 launches Y-3 SPORT - THERE ARE NO RULES",
         "thumbnails": {
             "default": {
@@ -131,7 +131,7 @@
     },
     {
         "id": "kzWqVH1sf-o",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Młody papież (2016) - trailer HBO",
         "thumbnails": {
             "default": {
@@ -157,7 +157,7 @@
     },
     {
         "id": "59Q_lhgGANc",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Jain - Makeba (Official Music Video)",
         "thumbnails": {
             "default": {
@@ -183,7 +183,7 @@
     },
     {
         "id": "wewAC5X_CZ8",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Jenn Schiffer, Engineer/Artist - XOXO Festival (2016)",
         "thumbnails": {
             "default": {
@@ -209,7 +209,7 @@
     },
     {
         "id": "YFupqkY8Q8w",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Official Destiny: Rise of Iron -  The Dawning Trailer",
         "thumbnails": {
             "default": {
@@ -235,7 +235,7 @@
     },
     {
         "id": "S9P63mY6scQ",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Być jak Lebowski",
         "thumbnails": {
             "default": {
@@ -261,7 +261,7 @@
     },
     {
         "id": "KY0TZQTwwbk",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Massive Attack, Ghostpoet - Come Near Me",
         "thumbnails": {
             "default": {
@@ -286,7 +286,7 @@
     },
     {
         "id": "geU8AxL460I",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "BLAH BLAH BLAH -- adidas Football",
         "thumbnails": {
             "default": {
@@ -311,7 +311,7 @@
     },
     {
         "id": "ElvLZMsYXlo",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Massive Attack, Young Fathers - Voodoo In My Blood",
         "thumbnails": {
             "default": {
@@ -336,7 +336,7 @@
     },
     {
         "id": "Z2Y30NNTQ0Y",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "KONTRAFAKT - JBMNT prod. MAIKY BEATZ |OFFICIAL VIDEO|",
         "thumbnails": {
             "default": {
@@ -361,7 +361,7 @@
     },
     {
         "id": "DfDzSncWnSw",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "PRO8L3M - 2040",
         "thumbnails": {
             "default": {
@@ -386,7 +386,7 @@
     },
     {
         "id": "NUC2EQvdzmY",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "DJ Shadow feat. Run The Jewels - Nobody Speak (Official Video)",
         "thumbnails": {
             "default": {
@@ -411,7 +411,7 @@
     },
     {
         "id": "m5vw4ajnWGA",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Mos Def - Mathematics",
         "thumbnails": {
             "default": {
@@ -436,7 +436,7 @@
     },
     {
         "id": "W2Wnvvj33Wo",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "The Last of Us Part II - PlayStation Experience 2016: Reveal Trailer | PS4",
         "thumbnails": {
             "default": {
@@ -461,7 +461,7 @@
     },
     {
         "id": "0siGVASN9PQ",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Gran Turismo Sport - PlayStation Experience 2016 Trailer | PS4",
         "thumbnails": {
             "default": {
@@ -486,7 +486,7 @@
     },
     {
         "id": "pKfxBKLnI9Q",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "The Last Guardian - PlayStation Experience 2016 Trailer | PS4",
         "thumbnails": {
             "default": {
@@ -511,7 +511,7 @@
     },
     {
         "id": "FvENaArE7rk",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "DJ Krush & Toshinori Kondo - Ki-Oku",
         "thumbnails": {
             "default": {
@@ -536,7 +536,7 @@
     },
     {
         "id": "HSTPZUeZKW4",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "What’s Coming to HBO in 2017",
         "thumbnails": {
             "default": {
@@ -561,7 +561,7 @@
     },
     {
         "id": "NrmMk1Myrxc",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Introducing Amazon Go and the world’s most advanced shopping technology",
         "thumbnails": {
             "default": {
@@ -586,7 +586,7 @@
     },
     {
         "id": "5tfNBqOqYNE",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Kobe Beef Steak Teppanyaki Style In Japan",
         "thumbnails": {
             "default": {
@@ -611,7 +611,7 @@
     },
     {
         "id": "fQqkPLnAEGM",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "10 rzeczy, których nie wiesz o SHIMANO",
         "thumbnails": {
             "default": {
@@ -636,7 +636,7 @@
     },
     {
         "id": "O9kLbrO2vBI",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Ace Combat 7 - PlayStation Experience 2016 Trailer | PS4, PSVR",
         "thumbnails": {
             "default": {
@@ -661,7 +661,7 @@
     },
     {
         "id": "m4VX4GK56pY",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Diox / The Returners - Samotnosc",
         "thumbnails": {
             "default": {
@@ -686,7 +686,7 @@
     },
     {
         "id": "OrQfyb6nWuA",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Saint Etienne - Only Love Can Break Your Heart",
         "thumbnails": {
             "default": {
@@ -711,7 +711,7 @@
     },
     {
         "id": "t7qvV5wXbq8",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Kiasmos - Drawn (Official Music Video)",
         "thumbnails": {
             "default": {
@@ -736,7 +736,7 @@
     },
     {
         "id": "tIdIqbv7SPo",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Bill Withers - Ain't No Sunshine",
         "thumbnails": {
             "default": {
@@ -761,7 +761,7 @@
     },
     {
         "id": "vhhkk69CxXc",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Bonobo : Break Apart (feat. Rhye)",
         "thumbnails": {
             "default": {
@@ -786,7 +786,7 @@
     },
     {
         "id": "BspNoMHH3-c",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Jak pić wódkę... z filmu \"Żólty szalik\"  Janusz Gajos",
         "thumbnails": {
             "default": {
@@ -811,7 +811,7 @@
     },
     {
         "id": "_FdW8JjgVm8",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Sztuka kochania. Historia Michaliny Wisłockiej. Zwiastun",
         "thumbnails": {
             "default": {
@@ -836,7 +836,7 @@
     },
     {
         "id": "MFuN4ipcxO8",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "WipEout - Through the Ages - Intro Movies",
         "thumbnails": {
             "default": {
@@ -861,7 +861,7 @@
     },
     {
         "id": "vky3M6s9ms4",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Congo Natty  'UK Allstars' (Machinedrum Remix)",
         "thumbnails": {
             "default": {
@@ -886,7 +886,7 @@
     },
     {
         "id": "UKTmHZFpfa8",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Civilization VI [PC] -- recenzja",
         "thumbnails": {
             "default": {
@@ -911,7 +911,7 @@
     },
     {
         "id": "oBHGxGPTsAI",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "FACE - Гоша Рубчинский (prod. by Tommy Kruise)",
         "thumbnails": {
             "default": {
@@ -936,7 +936,7 @@
     },
     {
         "id": "pFBUh3hKKDg",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Грибы - Велик",
         "thumbnails": {
             "default": {
@@ -961,7 +961,7 @@
     },
     {
         "id": "sWisuBtbypE",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Street Food Japan - A Taste of Delicious Japanese Cuisine Compilation",
         "thumbnails": {
             "default": {
@@ -986,7 +986,7 @@
     },
     {
         "id": "hTGJfRPLe08",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Jamie xx - Gosh",
         "thumbnails": {
             "default": {
@@ -1011,7 +1011,7 @@
     },
     {
         "id": "sygvbGHjcv0",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Fisz Emade Tworzywo - Biegnij dalej sam (official video)",
         "thumbnails": {
             "default": {
@@ -1036,7 +1036,7 @@
     },
     {
         "id": "VYiq96CfVx0",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Funny cartoons || Log Jam series (long version) || 14 minutes",
         "thumbnails": {
             "default": {
@@ -1061,7 +1061,7 @@
     },
     {
         "id": "CW5oGRx9CLM",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "The Weeknd - False Alarm",
         "thumbnails": {
             "default": {
@@ -1086,7 +1086,7 @@
     },
     {
         "id": "OQ5rI461KNE",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Run The Jewels - A Christmas F*cking Miracle (Official Music Video)",
         "thumbnails": {
             "default": {
@@ -1111,7 +1111,7 @@
     },
     {
         "id": "XtfRpoVWqRg",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Minilogue - Free Your Mind (Live Set 2011)",
         "thumbnails": {
             "default": {
@@ -1136,7 +1136,7 @@
     },
     {
         "id": "xf0WjeE6eyM",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "AKIRA: How To Animate Light",
         "thumbnails": {
             "default": {
@@ -1161,7 +1161,7 @@
     },
     {
         "id": "LiPWwd0WoRY",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "HVOB - Dogs (Oliver Koletzki Remix)",
         "thumbnails": {
             "default": {
@@ -1186,7 +1186,7 @@
     },
     {
         "id": "7nqHl_7oJC8",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "The Shoes - TIME TO DANCE (official video)",
         "thumbnails": {
             "default": {
@@ -1211,7 +1211,7 @@
     },
     {
         "id": "gMW-tZn1oVA",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Eldo - Włóczykij (muzyka: Voskovy)",
         "thumbnails": {
             "default": {
@@ -1236,7 +1236,7 @@
     },
     {
         "id": "PrqYohBV58o",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Ken Block Drifts London – EXTENDED Director's Cut - Top Gear - BBC",
         "thumbnails": {
             "default": {
@@ -1261,7 +1261,7 @@
     },
     {
         "id": "2Wh3TUXP81w",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Official Destiny: Rise of Iron – The Dawning Launch Trailer",
         "thumbnails": {
             "default": {
@@ -1286,7 +1286,7 @@
     },
     {
         "id": "EsUmw52LIOI",
-        "type": "youtube#video",
+        "type": "youtube",
         "name": "Bonobo : Kerala (Without video cuts)",
         "thumbnails": {
             "default": {

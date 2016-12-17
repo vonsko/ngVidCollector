@@ -1,5 +1,5 @@
 (function () {
-  let StorageService = function (localStorageService, $q) {
+  let StorageService = function (localStorageService, $q, $timeout) {
     function getVideoList() {
       return localStorageService.get("videosList") || [];
     }
@@ -24,15 +24,19 @@
       return (video) ? video.dateAdd : false;
     }
 
-    function addVideo(video) {
+    function addItem (video) {
+      let defer = $q.defer();
       let videoList = getVideoList();
       let baseFields = {
         dateAdd: moment().toDate().getTime(),
         fav: false
       };
+
       // @todo pass thru checkfordupes func
       videoList.push(Object.assign(video, baseFields));
-      updateVideoList(videoList);
+      defer.resolve(updateVideoList(videoList));
+
+      return defer.promise;
     }
 
     function deleteElement(video) {
@@ -53,7 +57,7 @@
 
     return {
       getVideoList,
-      addVideo,
+      addItem,
       clearStorage,
       fillStorage,
       isInStorage,

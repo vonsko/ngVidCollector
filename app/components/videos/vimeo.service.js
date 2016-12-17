@@ -1,12 +1,14 @@
 (function () {
-  let VimeoService = function ($http) {
+  let VimeoService = function ($http, $q) {
     function search (query) {
       return $http.get("https://api.vimeo.com/videos", {
         headers: {
           Authorization: "Bearer ebdd3d19744003399e0f4c6fbad533e8"
         },
         params: {
-          query: query.text
+          query: query.text,
+          page: 1,
+          per_page: 10
         }
       });
     }
@@ -25,6 +27,23 @@
         webkitallowfullscreen 
         mozallowfullscreen 
         allowfullscreen></iframe>`;
+    }
+
+    function additionalInfo (video) {
+      return $http.get("https://api.vimeo.com/videos/"+video.id, {
+        headers: {
+          Authorization: "Bearer ebdd3d19744003399e0f4c6fbad533e8"
+        },
+      });
+    }
+
+    function makeStatistics (stats) {
+      let sstats = stats.data;
+      return {
+        viewCount: sstats.stats.plays,
+        likeCount: sstats.metadata.connections.likes.total,
+        commentCount: sstats.metadata.connections.comments.total
+      };
     }
 
     function normalizeObject (item) {
@@ -61,8 +80,10 @@
     }
     return {
       search,
-      normalizeObject,
       getEmbed,
+      makeStatistics,
+      additionalInfo,
+      normalizeObject,
       getNormalizedResults
     };
   };

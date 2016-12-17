@@ -7,11 +7,29 @@
           type: "video",
           maxResults: "10",
           pageToken: "",
-          // part: "id,snippet,contentDetails", @todo: api youtube'a nie pobiera wszystkich informacji - trzeba to dodać w drugim requeście
           part: "id,snippet",
           q: query.text
         }
       });
+    }
+
+    function additionalInfo (video) {
+      return $http.get("https://www.googleapis.com/youtube/v3/videos", {
+        params: {
+          key: "AIzaSyDjMxSP8blKtpsjZ_C6Yk5Eu-u-bugif3M",
+          part: "statistics",
+          id: video.id
+        }
+      });
+    }
+
+    function makeStatistics (stats) {
+      let sstats = stats.data.items[0].statistics;
+      return {
+        viewCount: sstats.viewCount,
+        likeCount: sstats.likeCount,
+        commentCount: sstats.commentCount
+      };
     }
 
     function getEmbed (id, size) {
@@ -36,6 +54,7 @@
       results.data.items.forEach((item) => {
         newResults.push(normalizeObject(item));
       });
+
       console.log("results YT", results, newResults);
       return newResults;
     }
@@ -43,6 +62,8 @@
     return {
       search,
       getEmbed,
+      makeStatistics,
+      additionalInfo,
       normalizeObject,
       getNormalizedResults
     };

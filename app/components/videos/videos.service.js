@@ -49,6 +49,16 @@
       return name.toLowerCase().charAt(0).toUpperCase()+name.slice(1).toLowerCase() + "Service";
     }
 
+    function getAdditionalInfo (video) {
+      let Service = $injector.get(getApiService(video.type));
+      return Service.additionalInfo(video);
+    }
+
+    function makeStatistics (type, stats) {
+      let Service = $injector.get(getApiService(type));
+      return Service.makeStatistics(stats);
+    }
+
     function searchByQuery(query) {
       let Service = $injector.get(getApiService(query.engine));
       return Service.search(query);
@@ -76,6 +86,8 @@
       searchByQuery,
       getApiService,
       getEmbedCode,
+      makeStatistics,
+      getAdditionalInfo,
       normalizeObject,
       getNormalizedResults
     };

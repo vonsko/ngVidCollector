@@ -103,6 +103,7 @@
       <div class="md-list-item-text">
         <h4>{{ item.name }}</h4>
         <p>{{ item.description }}</p>
+        <p class="statsRow"><i class="fa fa-heart"></i> {{ item.statistics.likeCount }} likes, <i class="fa fa-eye"></i> {{ item.statistics.viewCount }} views, <i class="fa fa-comment"></i> {{ item.statistics.commentCount }} comments</p>
       </div>
       <md-icon md-font-set="material-icons" class="md-secondary md-hue-3" ng-click="$ctrl.favToggle(item)"
                aria-label="add to fav"><span ng-show="item.fav">favorite</span><span

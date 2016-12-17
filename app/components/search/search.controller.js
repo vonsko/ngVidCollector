@@ -19,13 +19,18 @@
     };
 
     ctrl.addVideo = (video) => {
-      StorageService.addVideo(video);
-      $mdToast.show(
-        $mdToast.simple()
-          .textContent(`Video ${ video.name } added to collection`)
-          .position("top right")
-          .hideDelay(3000)
-      );
+      VideosService.getAdditionalInfo(video).then((res) => {
+        video.statistics = VideosService.makeStatistics(video.type, res);
+        StorageService.addItem(video).then(() => {
+          console.log("addVideo", video, res);
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent(`Video ${ video.name } added to collection`)
+              .position("top right")
+              .hideDelay(3000)
+          );
+        });
+      });
     };
 
     ctrl.inStorage = (id) => StorageService.isInStorage(id);

@@ -1,22 +1,23 @@
 (function () {
-  let VideosController = function (VideosService, StorageService, $mdToast) {
-    this.$onInit = function () {
-      this.getVideos(this.viewSettings);
+  let VideosController = function (VideosService, StorageService, $mdToast, $mdDialog) {
+    let ctrl = this;
+    ctrl.$onInit = function () {
+      ctrl.getVideos(ctrl.viewSettings);
     };
-    this.videosList = [];
-    this.viewSettings = {
+    ctrl.videosList = [];
+    ctrl.viewSettings = {
       layout: "list",
       videosCount: 10,
       sorts: "newest",
       filters: null,
       page: 0
     };
-    this.openSelectVideosNumber = ($mdOpenMenu, e) => $mdOpenMenu(e);
-    this.changeViewSettings = (paramObj) => {
-      Object.assign(this.viewSettings, paramObj);
-      this.getVideos(this.viewSettings);
+    ctrl.openSelectVideosNumber = ($mdOpenMenu, e) => $mdOpenMenu(e);
+    ctrl.changeViewSettings = (paramObj) => {
+      Object.assign(ctrl.viewSettings, paramObj);
+      ctrl.getVideos(ctrl.viewSettings);
     };
-    this.favToggle = (video) => {
+    ctrl.favToggle = (video) => {
       video.fav = !video.fav;
       StorageService.updateVideo(video);
       $mdToast.show(
@@ -27,9 +28,9 @@
       );
     };
 
-    this.deleteVideo = (video) => {
-      StorageService.deleteVideo(video);
-      this.getVideos(this.viewSettings);
+    ctrl.deleteVideo = (video) => {
+      StorageService.deleteElement(video);
+      ctrl.getVideos(ctrl.viewSettings);
       $mdToast.show(
         $mdToast.simple()
           .textContent(`Video ${ video.name } deleted `)
@@ -38,18 +39,19 @@
       );
     };
 
-    this.getVideos = (paramObject, reset) => {
-      if(reset) this.viewSettings.page = 0;
-      this.videosList = VideosService.getVideosList(paramObject);
+    ctrl.getVideos = (paramObject, reset) => {
+      if(reset) ctrl.viewSettings.page = 0;
+      console.log("videosList", ctrl.videosList);
+      ctrl.videosList = VideosService.getVideosList(paramObject);
     };
 
-    this.getPage = (page) => {
-      if(!_.isUndefined(page)) { this.viewSettings.page = page; }
-      this.videosList = VideosService.getPageResult(this.viewSettings.page, this.viewSettings.videosCount);
+    ctrl.getPage = (page) => {
+      if(!_.isUndefined(page)) { ctrl.viewSettings.page = page; }
+      ctrl.videosList = VideosService.getPageResult(ctrl.viewSettings.page, ctrl.viewSettings.videosCount);
     };
 
-    this.getNextPage = () => {
-      if((this.viewSettings.page + 1) >= this.videosList.info.total) {
+    ctrl.getNextPage = () => {
+      if((ctrl.viewSettings.page + 1) >= ctrl.videosList.info.total) {
         $mdToast.show(
           $mdToast.simple()
             .textContent("You've reached the end")
@@ -57,13 +59,13 @@
             .hideDelay(3000)
         );
       } else {
-        this.viewSettings.page++;
+        ctrl.viewSettings.page++;
       }
-      this.getPage();
+      ctrl.getPage();
     };
 
-    this.getPrevPage = () => {
-      if((this.viewSettings.page - 1) < 0) {
+    ctrl.getPrevPage = () => {
+      if((ctrl.viewSettings.page - 1) < 0) {
         $mdToast.show(
           $mdToast.simple()
             .textContent("You've reached the beginning")
@@ -71,10 +73,29 @@
             .hideDelay(3000)
         );
       } else {
-        this.viewSettings.page--;
+        ctrl.viewSettings.page--;
       }
-      this.getPage();
+      ctrl.getPage();
     };
+
+    ctrl.showDialog = function (ev, video) {
+      $mdDialog.show({
+        controller: DialogPlayerController,
+        controllerAs: "$ctrl",
+        templateUrl: "./app/components/videos/videoPlayer/videoPlayer.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose:true,
+        locals: {
+          video
+        }
+      });
+    };
+
+    function DialogPlayerController ($mdDialog, video) {
+      this.video = video;
+      this.hide = () => {$mdDialog.hide();};
+    }
   };
 
   angular.module("videos")

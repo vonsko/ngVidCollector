@@ -1,8 +1,8 @@
 (function () {
   let topBar = {
     bindings: {
-      onTogglePane: "&",
-      appActions: "<"
+      actions: "<",
+      states: "<"
     },
     templateUrl: "./app/common/topBar.html",
     controller: "topBarController"

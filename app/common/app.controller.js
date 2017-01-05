@@ -1,16 +1,24 @@
 (function () {
   let AppController = function () {
     let ctrl = this;
-    ctrl.currentPanel = "videosPanel";
+    ctrl.states = {
+      currentPanel: "videosPanel"
+    };
 
     ctrl.actions = {
+      hideAll () {
+        ctrl.states.currentPanel = "";
+      },
+      showPanel (which) {
+        ctrl.states.currentPanel = `${which}Panel`;
+      },
       reloadVideosPanel (innerCallback) {
-        ctrl.currentPanel = "";
+        ctrl.states.currentPanel = "";
         if (typeof innerCallback === "function") innerCallback();
-        ctrl.currentPanel = "videosPanel";
+        ctrl.states.currentPanel = "videosPanel";
       },
       togglePanels () {
-        ctrl.currentPanel = (ctrl.currentPanel === "searchPanel") ? "videosPanel" : "searchPanel";
+        ctrl.states.currentPanel = (ctrl.states.currentPanel === "searchPanel") ? "videosPanel" : "searchPanel";
       }
     };
   };

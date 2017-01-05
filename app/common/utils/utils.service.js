@@ -1,7 +1,7 @@
 (function () {
   let UtilsService = function (StorageService, $http) {
     function clearStorage() {
-      StorageService.clearStorage();
+      return StorageService.clearStorage();
     }
 
     function fillTestData() {
